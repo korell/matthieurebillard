@@ -1,0 +1,252 @@
+@charset "UTF-8";
+/*
+
+ Reset CSS file by season.es
+ Author(s): Xavi Blanch - xavi.blanch@gmail.com
+
+   * Based on eric meyer's css reset
+   * CSS clearfix
+   * Added HTML5 tag definitions
+
+*/
+/* = reset */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, figure {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+:hover, :focus, :active {
+  outline: 0; }
+
+input[type="radio"] {
+  vertical-align: text-bottom; }
+
+input[type="checkbox"] {
+  vertical-align: bottom;
+  *vertical-align: baseline; }
+
+.ie6 input {
+  vertical-align: text-bottom; }
+
+select, input, textarea {
+  font: 99% sans-serif; }
+
+table {
+  font-size: inherit;
+  font: 100%; }
+
+ins {
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* = clearfix */
+/*
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+.clearfix:after { clear: both; }  
+.clearfix { zoom: 1; } 
+*/
+/* = html5 tag render */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+* {
+  box-sizing: border-box; }
+
+body, html {
+  height: 100%; }
+
+body {
+  padding-bottom: 1em;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  color: #4d4d4d;
+  font-size: 62.5%;
+  /*équivalent de 10px*/
+  background-color: #f4f4ee;
+  background-image: linear-gradient(right, #d2d2d2, rgba(244, 244, 238, 0), #d2d2d2); }
+
+a {
+  color: #4d4d4d;
+  transition: color 0.2s ease-in-out; }
+  a:hover {
+    color: #cac537;
+    text-decoration: none; }
+
+.wrapper {
+  padding-bottom: 1em; }
+
+.trait-vertical {
+  width: 1px;
+  height: 4em;
+  background-color: #cac537;
+  margin: 0 auto; }
+  .trait-vertical.court {
+    height: 2em; }
+
+.portrait img {
+  display: block;
+  margin: 0 auto;
+  width: 160px;
+  height: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #cac537;
+  padding: 0.3em; }
+
+section {
+  margin: 0 auto;
+  width: 400px;
+  text-align: center; }
+  section:before, section:after {
+    content: "";
+    display: block;
+    border: 1px solid #cac537;
+    height: 7px; }
+  section:before {
+    margin-bottom: 1em;
+    border-bottom: none; }
+  section:after {
+    margin-top: 1em;
+    border-top: none; }
+  section h1,
+  section p {
+    margin: 0 1rem; }
+  section h2 {
+    display: none; }
+
+.presentation h1 {
+  font-size: 3.5em;
+  font-weight: 300;
+  text-align: left; }
+  .presentation h1 .quality-wrapper {
+    position: relative;
+    height: 38px;
+    overflow: hidden;
+    display: block; }
+  .presentation h1 .quality {
+    top: -5px;
+    position: absolute;
+    line-height: 38px; }
+
+.contact p {
+  font-size: 2em;
+  font-weight: 400;
+  margin-bottom: 0.4em;
+  text-align: right; }
+
+.liens li {
+  display: inline-block;
+  margin-right: 1em;
+  width: 40px;
+  height: 40px; }
+  .liens li:last-child {
+    margin-right: 0; }
+  .liens li a.twitter {
+    background-position: left center; }
+  .liens li a.linkedin {
+    background-position: left bottom; }
+  .liens li a.viadeo {
+    background-position: left top; }
+  .liens li a.cv {
+    background-position: right top; }
+  .liens li a.mail {
+    background-position: right center; }
+  .liens li a.github {
+    background-position: right bottom; }
+  .liens li a svg {
+    fill: #4d4d4d;
+    display: block;
+    transition: transform 0.2s ease-in-out, fill 0.5s;
+    width: 40px;
+    height: 40px; }
+    .liens li a svg:hover, .liens li a svg:active {
+      transform: scale(1.2) rotate(-380deg);
+      fill: #cac537; }
+
+.infos p {
+  text-align: right;
+  font-size: 1.5em; }
+
+/************************MEDIA QUERIES */
+@media only screen and (max-width: 320px) {
+  body {
+    /*-webkit-box-sizing: content-box;*/ }
+
+  .wrapper {
+    padding: 0 1em 1em 1em;
+    width: 100%; }
+
+  section {
+    width: 100%; } }
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles */ }
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  /* Styles */ }
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+  /* Styles */ }
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */ }
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Styles */ }
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Styles */ }
+/**********
+iPad 3
+**********/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  /* Styles */ }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  /* Styles */ }
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */ }
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */ }
+/* iPhone 4 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  /* Styles */ }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  /* Styles */ }

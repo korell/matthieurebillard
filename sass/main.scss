@@ -1,0 +1,243 @@
+@charset "UTF-8";
+@import 'reset';
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic);
+	$color_gris_fonce: #4d4d4d;
+	$color_vert_anis: #cac537;
+*{
+	box-sizing: border-box;
+}
+body, html{
+	height: 100%;
+}
+body{
+	padding-bottom: 1em;
+	width: 100%;
+	font-family: 'Lato', sans-serif;
+	color: $color_gris_fonce;
+	font-size: 62.5%; /*équivalent de 10px*/
+	background-color: #f4f4ee;
+	background-image: linear-gradient(right, rgba(210, 210, 210, 1), rgba(244, 244, 238, 0), rgba(210, 210, 210, 1));
+}
+a{
+	color: $color_gris_fonce;
+	transition: color 0.2s ease-in-out;
+
+	&:hover{
+		color: $color_vert_anis;
+		text-decoration: none;
+	}
+}
+.wrapper{
+	padding-bottom:1em;
+}
+.trait-vertical{
+	width: 1px;
+	height: 4em;
+	background-color: $color_vert_anis;
+	margin: 0 auto;
+	&.court{
+		height: 2em;
+	}
+}
+.portrait img{
+	display: block;
+	margin: 0 auto;
+	width: 160px;
+	height: auto;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 1px solid $color_vert_anis;
+	padding: 0.3em;
+}
+section{
+	margin: 0 auto;
+	width: 400px;
+	text-align: center;
+
+  &:before,
+  &:after{
+  	content: "";
+  	display: block;
+  	border: 1px solid $color_vert_anis;
+  	height: 7px;
+  }
+
+  &:before{
+  	margin-bottom: 1em;
+  	border-bottom: none;
+  }
+
+  &:after{
+  	margin-top: 1em;
+  	border-top: none;
+  }
+
+  h1,
+  p{
+  	margin: 0 1rem;
+  }
+
+  h2{
+  	display: none;
+  }
+}
+
+.presentation h1{
+	font-size: 3.5em;
+	font-weight: 300;
+	text-align: left;
+
+  .quality-wrapper{
+    //width: 100%;
+  	//margin-top: 3px;
+  	position: relative;
+  	height: 38px;
+  	overflow: hidden;
+  	display: block;
+  }
+
+  .quality{
+  	top: -5px;
+  	position: absolute;
+  	line-height: 38px;
+  }
+}
+
+.contact p{
+	font-size: 2em;
+	font-weight: 400;
+	margin-bottom: 0.4em;
+	text-align: right;
+}
+
+.liens li{
+
+	display: inline-block;
+	margin-right: 1em;
+	width: 40px;
+	height: 40px;
+
+  &:last-child{
+    margin-right: 0;
+  }
+
+  a{
+
+    &.twitter{
+      background-position: left center;
+    }
+    &.linkedin{
+      background-position: left bottom;
+    }
+    &.viadeo{
+      background-position: left top;
+    }
+    &.cv{
+      background-position: right top;
+    }
+    &.mail{
+      background-position: right center;
+    }
+    &.github{
+      background-position: right bottom;
+    }
+
+    svg{
+      fill: $color_gris_fonce;
+      display: block;
+      transition: transform 0.2s ease-in-out, fill 0.5s;
+      width: 40px;
+      height: 40px;
+
+      &:hover,
+      &:active{
+        transform: scale(1.2) rotate(-380deg);
+        fill: $color_vert_anis;
+      }
+    }
+  }
+}
+
+	
+.infos p{
+	text-align: right;
+	font-size: 1.5em;
+}
+
+/************************MEDIA QUERIES */
+
+@media only screen and (max-width: 320px){
+	body{
+		/*-webkit-box-sizing: content-box;*/
+	}
+	.wrapper{
+		padding: 0 1em 1em 1em;
+		width: 100%;
+	}
+	section{
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 320px) and (orientation: landscape){
+
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* Styles */
+}
+/**********
+iPad 3
+**********/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
