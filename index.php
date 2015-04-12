@@ -130,7 +130,7 @@
 						h2.9384766L29.2407227,27.9160156z"/>
 					</svg>
 				</a></li>
-				<li><a class="mail" href="mailto:hello@matthieurebillard.fr">
+				<li><a class="mail mail-link" title="Activer Javascript pour voir l'adresse e-mail">
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
 						<path d="M20,0C8.9550781,0,0,8.9541016,0,20s8.9550781,20,20,20c11.0463867,0,20-8.9541016,20-20
 						S31.0463867,0,20,0z M31.5712891,11.9003906L20,21.9277344L8.4277344,11.9003906H31.5712891z M7.6572266,12.6708984
@@ -145,8 +145,8 @@
 		<div class="trait-vertical"></div>
 		<section class="contact">
 			<h2>Me contacter, parlons de votre projet</h2>
-			<p>06 22 80 28 60</p>
-			<p><a href="mailto:hello@matthieurebillard.fr">hello@matthieurebillard.fr</a></p>
+			<p class="mobile-phone">Activer Javascript pour voir le numéro de téléphone</p>
+			<p><a class="email mail-link">Activer Javascript pour voir l'adresse e-mail</a></p>
 		</section>
 		<div class="trait-vertical"></div>
 		<section class="infos">

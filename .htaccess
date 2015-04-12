@@ -52,7 +52,7 @@ deny from all
 # protection de la lecture des répertoires
   # Options -Indexes
 
- # KILL THEM ETAGS
- Header unset ETag
- FileETag none
+# KILL THEM ETAGS
+#Header unset ETag
+#FileETag none
 
