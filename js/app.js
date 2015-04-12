@@ -144,6 +144,7 @@ function makeEmailAddress(){
 	$('.mail-link').attr('href', 'mailto:' + mail).attr('title', 'Envoyer un e-mail');
 }
 
+//generate phone number to hide it to robots
 function makeMobilePhone(){
 
 	var b = '22 ';
