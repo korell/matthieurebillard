@@ -127,6 +127,7 @@ function clignoteCurseur(){
 		clignoteCurseur();
 	}, 1000);
 }
+//generate email address to hide it to robots
 function makeEmailAddress(){
 
 	var sep = 'jfuhdnujdsp';
