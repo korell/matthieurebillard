@@ -56,3 +56,7 @@ deny from all
 #Header unset ETag
 #FileETag none
 
+#Redirect to https
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
