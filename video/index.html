@@ -1,3 +1,8 @@
+<!--
+
+SALUT NETIL !
+
+-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,29 +12,25 @@
     body{
       font-family: arial, sans-serif;
       font-weight: 400;
+      background-color: #CCC;
+      margin: 0;
+      padding: 0;
     }
-    .container{
-      position: relative;
-      margin: 0 auto;
+    .wrapper{
+      margin: 100px auto;
       width:800px;
+      
+
     }
     video{
       width: 800px;
       margin-bottom: 20px;
-    }
-    img.logo{
-      position: absolute;
-      z-index: 2;
-      right: 10px;
-      top: 10px;
-      display: none;
     }
     .call{
       width: 30%;
       line-height: 60px;
       color: white;
       text-align: center;
-      background-color: #417B98;
       border: none;
       font-size: 16px;
       text-transform: uppercase;
@@ -43,13 +44,24 @@
       transform: rotate(60deg) scale(0, 0);
     }
     .call.visible{
-      transform: rotate(0deg) scale(100%, 100%);
+    }
+    .call-1{
+      background-color: #417B98;
+    }
+    .call-1:hover{
+      background-color: #2D5568;
     }
     .call-2{
       background-color: #A62670;
     }
+    .call-2:hover{
+      background-color: #821E57;
+    }
     .call-3{
       background-color: #A2932B;
+    }
+    .call-3:hover{
+      background-color: #7A7021;
     }
     .call:last-child{
       margin-right: 0;
@@ -57,15 +69,14 @@
   </style>
 </head>
 <body>
-  <header id="accueil" class="container">
+  <section class="wrapper">
     <video autoplay loop muted id="video">
       <source src="landscape.mp4">
     </video>
-    <img class="logo" src="favicon-128.png" alt="logo" width="128" height="128">
     <a href="#" class="call call-1 hide">Nos prestations</a>
     <a href="#" class="call call-2 hide">Nos locaux</a>
     <a href="#" class="call call-3 hide">Contactez-nous</a>
-  </header>
+  </section>
 
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -76,7 +87,6 @@
 
     setInterval(function(){
       var currentTime = video[0].currentTime;
-      console.log(currentTime);
       if( currentTime > 3){
         $('.call-1').removeClass('hide').addClass('visible');
       }
