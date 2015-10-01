@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Test de positionnement icone player</title>
+  <style type="text/css">
+    body{
+      font-family: arial, sans-serif;
+      font-weight: 400;
+    }
+    .container{
+      position: relative;
+      margin: 0 auto;
+      width:800px;
+    }
+    video{
+      width: 800px;
+      margin-bottom: 20px;
+    }
+    img.logo{
+      position: absolute;
+      z-index: 2;
+      right: 10px;
+      top: 10px;
+      display: none;
+    }
+    .call{
+      width: 30%;
+      line-height: 60px;
+      color: white;
+      text-align: center;
+      background-color: #417B98;
+      border: none;
+      font-size: 16px;
+      text-transform: uppercase;
+      border-radius: 5px;
+      float: left;
+      margin-right: 5%;
+      text-decoration: none;
+      transition: transform 0.2s cubic-bezier(.56,1.39,.53,1);
+    }
+    .call.hide{
+      transform: rotate(60deg) scale(0, 0);
+    }
+    .call.visible{
+      transform: rotate(0deg) scale(100%, 100%);
+    }
+    .call-2{
+      background-color: #A62670;
+    }
+    .call-3{
+      background-color: #A2932B;
+    }
+    .call:last-child{
+      margin-right: 0;
+    }
+  </style>
+</head>
+<body>
+  <header id="accueil" class="container">
+    <video autoplay loop muted id="video">
+      <source src="landscape.mp4">
+    </video>
+    <img class="logo" src="favicon-128.png" alt="logo" width="128" height="128">
+    <a href="#" class="call call-1 hide">Nos prestations</a>
+    <a href="#" class="call call-2 hide">Nos locaux</a>
+    <a href="#" class="call call-3 hide">Contactez-nous</a>
+  </header>
+
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script>
+  $(function(){
+
+    var video = $('#video');
+
+    setInterval(function(){
+      var currentTime = video[0].currentTime;
+      console.log(currentTime);
+      if( currentTime > 3){
+        $('.call-1').removeClass('hide').addClass('visible');
+      }
+      if( currentTime > 6){
+        $('.call-2').removeClass('hide').addClass('visible');
+      }
+      if( currentTime > 9){
+        $('.call-3').removeClass('hide').addClass('visible');
+      }
+    }, 100);
+    
+
+  });
+  </script>
+</body>
+</html>
