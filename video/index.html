@@ -7,12 +7,12 @@ SALUT NETIL !
 <html>
 <head>
   <meta charset="utf-8"/>
-  <title>Test de positionnement icone player</title>
+  <title>Vidéo test Netil</title>
   <style type="text/css">
     body{
       font-family: arial, sans-serif;
       font-weight: 400;
-      background-color: #CCC;
+      background-color: white;
       margin: 0;
       padding: 0;
     }
@@ -71,11 +71,11 @@ SALUT NETIL !
 <body>
   <section class="wrapper">
     <video autoplay loop muted id="video">
-      <source src="landscape.mp4">
+      <source src="demo-tracking.mp4">
     </video>
-    <a href="#" class="call call-1 hide">Nos prestations</a>
-    <a href="#" class="call call-2 hide">Nos locaux</a>
-    <a href="#" class="call call-3 hide">Contactez-nous</a>
+    <a href="#" class="call call-1 hide">Motion design</a>
+    <a href="#" class="call call-2 hide">Développement web</a>
+    <a href="#" class="call call-3 hide">Design d'espace</a>
   </section>
 
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -87,13 +87,14 @@ SALUT NETIL !
 
     setInterval(function(){
       var currentTime = video[0].currentTime;
-      if( currentTime > 3){
+      console.log(currentTime);
+      if( currentTime > 0.5){
         $('.call-1').removeClass('hide').addClass('visible');
       }
-      if( currentTime > 6){
+      if( currentTime > 8.2){
         $('.call-2').removeClass('hide').addClass('visible');
       }
-      if( currentTime > 9){
+      if( currentTime > 13.8){
         $('.call-3').removeClass('hide').addClass('visible');
       }
     }, 100);
