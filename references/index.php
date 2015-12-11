@@ -16,7 +16,7 @@
 <body ontouchstart="">
 	<div class="wrapper">
 		<div class="trait-vertical court"></div>
-		<div class="portrait"><img src="img/photo-mat.jpg" alt="Matthieu Rébillard - Développeur web à Nantes"></div>
+		<div class="portrait"><a href="//matthieurebillard.fr"><img src="img/photo-mat.jpg" alt="Matthieu Rébillard - Développeur web à Nantes"></a></div>
 		<div class="trait-vertical court"></div>
 		<section class="presentation">
 			<!--<h1>Salut, je suis Matthieu Rébillard,<br>développeur et intégrateur web<br><span class="quality-wrapper"><span class="quality"></span></span></h1>-->
