@@ -1,0 +1,106 @@
+<!--
+
+SALUT NETIL !
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Vidéo test Netil</title>
+  <style type="text/css">
+    body{
+      font-family: arial, sans-serif;
+      font-weight: 400;
+      background-color: white;
+      margin: 0;
+      padding: 0;
+    }
+    .wrapper{
+      margin: 100px auto;
+      width:800px;
+      
+
+    }
+    video{
+      width: 800px;
+      margin-bottom: 20px;
+    }
+    .call{
+      width: 30%;
+      line-height: 60px;
+      color: white;
+      text-align: center;
+      border: none;
+      font-size: 16px;
+      text-transform: uppercase;
+      border-radius: 5px;
+      float: left;
+      margin-right: 5%;
+      text-decoration: none;
+      transition: transform 0.2s cubic-bezier(.56,1.39,.53,1);
+    }
+    .call.hide{
+      transform: rotate(60deg) scale(0, 0);
+    }
+    .call.visible{
+    }
+    .call-1{
+      background-color: #417B98;
+    }
+    .call-1:hover{
+      background-color: #2D5568;
+    }
+    .call-2{
+      background-color: #A62670;
+    }
+    .call-2:hover{
+      background-color: #821E57;
+    }
+    .call-3{
+      background-color: #A2932B;
+    }
+    .call-3:hover{
+      background-color: #7A7021;
+    }
+    .call:last-child{
+      margin-right: 0;
+    }
+  </style>
+</head>
+<body>
+  <section class="wrapper">
+    <video autoplay loop muted id="video">
+      <source src="demo-tracking.mp4">
+    </video>
+    <a href="#" class="call call-1 hide">Motion design</a>
+    <a href="#" class="call call-2 hide">Développement web</a>
+    <a href="#" class="call call-3 hide">Design d'espace</a>
+  </section>
+
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script>
+  $(function(){
+
+    var video = $('#video');
+
+    setInterval(function(){
+      var currentTime = video[0].currentTime;
+      console.log(currentTime);
+      if( currentTime > 0.5){
+        $('.call-1').removeClass('hide').addClass('visible');
+      }
+      if( currentTime > 8.2){
+        $('.call-2').removeClass('hide').addClass('visible');
+      }
+      if( currentTime > 13.8){
+        $('.call-3').removeClass('hide').addClass('visible');
+      }
+    }, 100);
+    
+
+  });
+  </script>
+</body>
+</html>
