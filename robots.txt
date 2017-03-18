@@ -1,11 +1,2 @@
 User-agent: *
 Allow: /
-Disallow: /martine
-Disallow: /test
-Disallow: /opus
-Disallow: /salesforce
-Disallow: /3wa
-Disallow: /sub-route
-Disallow: /galerie
-Disallow: /img
-Allow: /img/photo-mat.jpg
