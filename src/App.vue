@@ -35,7 +35,11 @@
     inset: 0;
     background-image: url('/bg-desktop-dark-3200-2600.jpg');
     background-size: cover;
-    opacity: 0.5;
+    opacity: 0;
+
+    --opacity: 0.5;
+
+    animation: fadeIn 10000ms forwards;
 
     cite {
       font-size: 1.6rem;
@@ -47,6 +51,14 @@
     z-index: 2;
     text-align: center;
 
+    & > * {
+      opacity: 0;
+      transform: translateY(-0.5rem);
+      animation-name: fadeIn, slideDown;
+      animation-duration: 2000ms, 1000ms;
+      animation-fill-mode: forwards;
+    }
+
     h1 {
       font-size: 6.4rem;
     }
@@ -54,6 +66,7 @@
     h2 {
       font-size: 4rem;
       margin-top: 2rem;
+      animation-delay: 300ms;
     }
   }
 
@@ -63,6 +76,27 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 7rem;
+    animation-delay: 600ms;
+
+    &:hover img {
+      transform: scale(1.2);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: var(--opacity, 1);
+    }
+  }
+
+  @keyframes slideDown {
+    to {
+      transform: translateY(0);
+    }
   }
 }
 </style>
