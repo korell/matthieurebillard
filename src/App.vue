@@ -20,7 +20,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 320px;
   min-height: 100vh;
   background-color: var(--color-black);
   //background-color: white;
@@ -33,13 +32,28 @@
     position: absolute;
     z-index: 1;
     inset: 0;
-    background-image: url('/bg-desktop-dark-3200-2600.jpg');
+    background-image: url('/bg-desktop-dark-1600-1300.jpg');
     background-size: cover;
     opacity: 0;
 
     --opacity: 0.5;
 
     animation: fadeIn 10000ms forwards;
+
+    @media screen and (-webkit-min-device-pixel-ratio: 1.5),
+    screen and (min-resolution: 1.5dppx) {
+      background-image: url('/bg-desktop-dark-3200-2600.jpg');
+    }
+
+    @media screen and (max-aspect-ratio: 1/1) {
+      background-image: url('/bg-mobile-dark-700-1200.jpg');
+      background-position-x: center;
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-aspect-ratio: 1/1),
+    screen and (min-resolution: 1.5dppx) and (max-aspect-ratio: 1/1) {
+      background-image: url('/bg-mobile-dark-1400-2400.jpg');
+    }
 
     cite {
       font-size: 1.6rem;
@@ -60,11 +74,12 @@
     }
 
     h1 {
-      font-size: 6.4rem;
+      font-size: clamp(3rem, 15vw, 6.4rem);
     }
 
     h2 {
-      font-size: 4rem;
+      //font-size: 4rem;
+      font-size: clamp(2.5rem, 9vw, 4rem);
       margin-top: 2rem;
       animation-delay: 300ms;
     }
@@ -78,8 +93,12 @@
     margin-top: 7rem;
     animation-delay: 600ms;
 
+    img {
+      transition: transform 300ms;
+    }
+
     &:hover img {
-      transform: scale(1.2);
+      transform: scale(1.1);
     }
   }
 
