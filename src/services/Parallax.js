@@ -37,8 +37,15 @@ export class Parallax {
         if(!this.orientable) {
             this.orientable = true
         }
-        const xNormal = Math.min(0.5, Math.max(-0.5, ((ev.gamma + 90) / 180) - 0.5))
-        const yNormal = (ev.beta / 90) - 0.5
+        //console.log('ev.beta', ev.beta);
+        //console.log('ev.gamma', ev.gamma);
+        const orientation = {
+            x: ev.beta < 90 ? ev.gamma : ev.gamma * -1,
+            y: Math.min(135, Math.max(-45, ev.beta)),
+        }
+        const xNormal = Math.min(0.5, Math.max(-0.5, ((orientation.x + 90) / 180) - 0.5))
+        const yNormal = (orientation.y / 90) - 0.5
+        //console.log('orientation.y, yNormal', orientation.y, yNormal);
         this.pointerPosition = {
             x: xNormal,
             y: yNormal
@@ -97,6 +104,9 @@ export class Parallax {
                 y: targetPosition.y,
             }
         }
+        
+        //console.log('offsetPosition.y', offsetPosition.y);
+        //console.log('this.pointerPosition.y', this.pointerPosition.y);
 
         this.bg.style.setProperty('--offset-x', `${offsetPosition.x}px`)
         this.bg.style.setProperty('--offset-y', `${offsetPosition.y}px`)
