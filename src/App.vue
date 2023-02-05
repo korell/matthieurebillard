@@ -6,7 +6,7 @@
     </div>
     <div class="Page-content">
       <h1>Matthieu Rébillard</h1>
-      <h2>Senior front-end developer</h2>
+      <h2>Développeur front-end senior</h2>
       <a href="https://www.linkedin.com/in/matthieurebillard/" target="_blank" class="Page-cta">
         <img src="/logo-linkedin.svg" alt="logo LinkedIn" width="50"/>
       </a>
