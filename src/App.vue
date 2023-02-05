@@ -7,6 +7,7 @@
     <div class="Page-content">
       <h1>Matthieu Rébillard</h1>
       <h2>Développeur front-end senior</h2>
+      <div class="Page-city">Nantes</div>
       <a href="https://www.linkedin.com/in/matthieurebillard/" target="_blank" class="Page-cta">
         <img src="/logo-linkedin.svg" alt="logo LinkedIn" width="50"/>
       </a>
@@ -122,10 +123,16 @@ onMounted(() => {
 
     h2 {
       //font-size: 4rem;
-      font-size: clamp(2.5rem, 9vw, 4rem);
-      margin-top: 2rem;
+      font-size: clamp(2.5rem, 8vw, 3.5rem);
+      margin-top: 1rem;
       animation-delay: 300ms;
     }
+
+  }
+  &-city {
+    font-size: 2rem;
+    margin-top: 2.5rem;
+    animation-delay: 600ms;
   }
 
   &-cta {
@@ -134,7 +141,7 @@ onMounted(() => {
     margin-left: auto;
     margin-right: auto;
     margin-top: 7rem;
-    animation-delay: 600ms;
+    animation-delay: 900ms;
 
     img {
       transition: transform 300ms;
